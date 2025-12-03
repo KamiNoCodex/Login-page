@@ -1,0 +1,202 @@
+/* Import Poppins font for a modern look (already in HTML but good practice) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+    --primary-color: #007bff; /* A clean blue for buttons/links */
+    --background-color: #f4f7f6; /* Very light gray/blue background */
+    --card-background: #ffffff;
+    --text-color: #333333;
+    --placeholder-color: #a0a0a0;
+    --border-color: #e0e0e0;
+}
+
+/* Base styles and reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align content to the top initially */
+    min-height: 100vh;
+    padding: 20px 0; /* Add some vertical padding */
+}
+
+.page-container {
+    width: 100%;
+    max-width: 400px; /* Max width for a clean mobile-like interface */
+    padding: 0 20px;
+}
+
+/* --- App Header Styling --- */
+.app-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    margin-bottom: 30px;
+}
+
+.back-link {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-color);
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.page-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+/* --- Login Card Styling --- */
+.login-card {
+    background: var(--card-background);
+    padding: 40px 30px;
+    border-radius: 12px;
+    /* Professional-looking shadow */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05), 0 4px 6px rgba(0, 0, 0, 0.03);
+    text-align: center;
+}
+
+.welcome-text {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--text-color);
+}
+
+.subtitle {
+    font-size: 14px;
+    color: var(--placeholder-color);
+    margin-bottom: 30px;
+}
+
+/* --- Form Elements --- */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center; /* Align input and button */
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden; /* Ensure button corners match input group */
+}
+
+input[type="email"] {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: none;
+    font-size: 16px;
+    color: var(--text-color);
+    outline: none;
+}
+
+input[type="email"]::placeholder {
+    color: var(--placeholder-color);
+}
+
+.login-button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.login-button:hover {
+    background-color: #0056b3;
+}
+
+/* OR Separator */
+.separator {
+    position: relative;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.separator::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    border-top: 1px solid var(--border-color);
+    z-index: 1;
+}
+
+.or-text {
+    background-color: var(--card-background);
+    color: var(--placeholder-color);
+    padding: 0 10px;
+    position: relative;
+    z-index: 2;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Google Sign-in Button */
+.google-sign-in {
+    width: 100%;
+    padding: 12px;
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.google-sign-in:hover {
+    background-color: var(--background-color);
+    border-color: #c0c0c0;
+}
+
+/* Sign Up Prompt */
+.signup-prompt {
+    margin-top: 30px;
+    font-size: 14px;
+    color: var(--placeholder-color);
+}
+
+.create-account-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.create-account-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Accessibility: Hide element but keep it readable by screen readers */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
