@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Back</title>
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-container">
+        <header class="app-header">
+            <a href="#" class="back-link">
+                &larr;
+            </a>
+            <h1 class="page-title">Page title</h1>
+        </header>
+
+        <main class="login-card-container">
+            <div class="login-card">
+                <h2 class="welcome-text">Welcome Back</h2>
+                <p class="subtitle">Sign in to continue to your account</p>
+
+                <form class="login-form">
+                    <div class="input-group">
+                        <label for="email" class="sr-only">Email</label>
+                        <input type="email" id="email" placeholder="Email" required>
+                        <button type="submit" class="login-button">Login</button>
+                    </div>
+
+                    <div class="separator">
+                        <span class="or-text">OR</span>
+                    </div>
+
+                    <button type="button" class="google-sign-in">
+                        Sign in with Google
+                    </button>
+                </form>
+
+                <div class="signup-prompt">
+                    Don't have an account? <a href="#" class="create-account-link">Create one</a>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
